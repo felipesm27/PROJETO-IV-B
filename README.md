@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Gestão de Clientes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto de exemplo desenvolvido em React para gerenciar uma lista de clientes. O sistema permite adicionar, editar, excluir e pesquisar clientes, além de contar o número total de cadastros.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Adicionar Cliente**: Clique no botão "Novo" para adicionar um novo cliente.
+- **Pesquisar Cliente**: Digite o nome do cliente no campo de busca para filtrar os resultados.
+- **Contagem de Cadastros**: Mostra o número total de clientes cadastrados, exceto quando o campo de pesquisa está em foco.
+- **Editar Cliente**: Cada cliente possui um botão para edição.
+- **Excluir Cliente**: Cada cliente possui um botão para exclusão.
 
-### `npm start`
+## Estrutura do Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **src/App.js**: Componente principal que organiza a estrutura da aplicação e integra os outros componentes.
+- **src/components/NavBar.js**: Componente para a barra de navegação.
+- **src/components/Footer.js**: Componente para o rodapé.
+- **src/components/BarraDePesquisa.js**: Componente para o campo de pesquisa com uma lupa.
+- **src/components/ListaDeClientes.js**: Componente que exibe a lista de clientes.
+- **src/components/ItemCliente.js**: Componente individual para cada cliente na lista.
+- **src/services/api.js**: Serviço que gerencia as requisições para o servidor JSON.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Como Executar o Projeto
 
-### `npm test`
+1. Clone o repositório para sua máquina local.
+2. Instale as dependências do projeto:
+   ```bash
+   npm install
+   ```
+3. Inicie o JSON Server para simular uma API REST com o arquivo `clientes.json`:
+   ```bash
+   json-server --watch clientes.json --port 3001
+   ```
+4. Execute o projeto React:
+   ```bash
+   npm start
+   ```
+5. Acesse a aplicação no navegador em `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependências
 
-### `npm run build`
+- **React**: Biblioteca principal para a criação da interface do usuário.
+- **JSON Server**: Utilizado para simular uma API REST com operações CRUD.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estrutura do Banco de Dados
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O arquivo `clientes.json` armazena os dados dos clientes com o seguinte formato:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+{
+  "clientes": [
+    {
+      "cliente_id": 1,
+      "nome": "João Silva",
+      "endereco": "Rua A, 123",
+      "cep": "12345-678",
+      "data_nascimento": "1990-01-01",
+      "telefone": "(11) 91234-5678"
+    },
+    ...
+  ]
+}
+```
