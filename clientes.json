@@ -1,0 +1,20 @@
+{
+  "clientes": [
+    {
+      "cliente_id": 1,
+      "nome": "João Silva",
+      "endereco": "Rua A, 123",
+      "cep": "12345-678",
+      "data_nascimento": "1990-01-01",
+      "telefone": "(11) 91234-5678"
+    },
+    {
+      "cliente_id": 2,
+      "nome": "Maria Santos",
+      "endereco": "Avenida B, 456",
+      "cep": "87654-321",
+      "data_nascimento": "1985-05-15",
+      "telefone": "(21) 91234-5678"
+    }
+  ]
+}

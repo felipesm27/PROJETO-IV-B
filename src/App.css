@@ -1,0 +1,7 @@
+@import "./styles/variables.css";
+
+/* Estilos globais */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

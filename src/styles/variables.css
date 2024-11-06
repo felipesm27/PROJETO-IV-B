@@ -1,0 +1,15 @@
+/* src/styles/variables.css */
+
+/* Tema Claro */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #0066cc;
+}
+
+/* Tema Escuro */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #f0f0f0;
+  --primary-color: #bb86fc;
+}
