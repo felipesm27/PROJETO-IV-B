@@ -4,11 +4,11 @@ import "../styles/ItemCliente.css";
 
 function ItemCliente({ cliente }) {
   const editarCliente = () => {
-    console.log(`Editar cliente: ${cliente.cliente_id}`);
+    console.log(`Editar cliente: ${cliente.id}`);
   };
 
   const excluirCliente = () => {
-    console.log(`Excluir cliente: ${cliente.cliente_id}`);
+    console.log(`Excluir cliente: ${cliente.id}`);
   };
 
   return (

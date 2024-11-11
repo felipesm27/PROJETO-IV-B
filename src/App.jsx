@@ -9,13 +9,14 @@ import { fetchClientes } from "./services/api";
 function App() {
   const [clientes, setClientes] = useState([]);
   const [pesquisa, setPesquisa] = useState("");
-  const [pesquisaFocada, setPesquisaFocada] = useState(false); // Estado para controlar o foco
+  const [pesquisaFocada, setPesquisaFocada] = useState(false); // Estado para controlar o foco da pesquisa
 
+  // Carrega a lista de clientes ao montar o componente
   useEffect(() => {
     const carregarClientes = async () => {
       const response = await fetchClientes();
       if (response.status === 200) {
-        setClientes(response.data);
+        setClientes(response.data); // Atualiza o estado com os clientes obtidos
       } else {
         console.error(`Erro (${response.status}): ${response.error}`);
       }
@@ -23,10 +24,12 @@ function App() {
     carregarClientes();
   }, []);
 
+  // Filtra os clientes com base no termo de pesquisa
   const clientesFiltrados = clientes.filter((cliente) =>
     cliente.nome.toLowerCase().includes(pesquisa.toLowerCase())
   );
 
+  // Função para abrir o formulário de adição de cliente
   const abrirFormularioNovoCliente = () => {
     console.log("Abrir formulário para adicionar novo cliente");
   };
@@ -46,10 +49,15 @@ function App() {
           onBlur={() => setPesquisaFocada(false)} // Atualiza o estado para false ao desfocar
         />
 
-        {/* Condicionalmente exibe a contagem apenas se o campo de pesquisa não estiver focado */}
-        {!pesquisaFocada && <p>Total de cadastros: {clientes.length}</p>}
+        {/* Exibe a contagem de registros encontrados dinamicamente */}
+        <p>
+          {clientesFiltrados.length > 1
+            ? `${clientesFiltrados.length} registros encontrados`
+            : `${clientesFiltrados.length} registro encontrado`}
+        </p>
 
         <div className="area-lista-clientes">
+          {/* Passa a lista de clientes filtrados e usa uma key única para cada item */}
           <ListaDeClientes clientes={clientesFiltrados} />
         </div>
       </main>
