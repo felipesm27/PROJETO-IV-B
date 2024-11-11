@@ -1,0 +1,100 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "endereco": "Rua A, 123",
+      "cep": "12345-678",
+      "data_nascimento": "1990-01-01",
+      "telefone": "(11) 91234-5678"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Santos",
+      "endereco": "Avenida B, 456",
+      "cep": "87654-321",
+      "data_nascimento": "1985-05-15",
+      "telefone": "(21) 91234-5678"
+    },
+    {
+      "id": 3,
+      "nome": "Carlos Oliveira",
+      "endereco": "Rua C, 789",
+      "cep": "65432-109",
+      "data_nascimento": "1992-06-10",
+      "telefone": "(11) 91234-4321"
+    },
+    {
+      "id": 4,
+      "nome": "Ana Martins",
+      "endereco": "Rua D, 101",
+      "cep": "78965-432",
+      "data_nascimento": "1988-02-20",
+      "telefone": "(21) 91234-8765"
+    },
+    {
+      "id": 5,
+      "nome": "Pedro Lima",
+      "endereco": "Rua E, 202",
+      "cep": "34567-890",
+      "data_nascimento": "1995-04-25",
+      "telefone": "(11) 91234-5678"
+    },
+    {
+      "id": 6,
+      "nome": "Beatriz Souza",
+      "endereco": "Avenida F, 303",
+      "cep": "45678-901",
+      "data_nascimento": "1982-08-30",
+      "telefone": "(21) 91234-1234"
+    },
+    {
+      "id": 7,
+      "nome": "José Fernandes",
+      "endereco": "Rua G, 404",
+      "cep": "56789-012",
+      "data_nascimento": "1990-11-11",
+      "telefone": "(11) 91234-8765"
+    },
+    {
+      "id": 8,
+      "nome": "Juliana Mendes",
+      "endereco": "Avenida H, 505",
+      "cep": "67890-123",
+      "data_nascimento": "1987-09-15",
+      "telefone": "(21) 91234-6543"
+    },
+    {
+      "id": 9,
+      "nome": "Fernando Costa",
+      "endereco": "Rua I, 606",
+      "cep": "78901-234",
+      "data_nascimento": "1980-03-17",
+      "telefone": "(11) 91234-3456"
+    },
+    {
+      "id": 10,
+      "nome": "Larissa Ribeiro",
+      "endereco": "Avenida J, 707",
+      "cep": "89012-345",
+      "data_nascimento": "1993-12-05",
+      "telefone": "(21) 91234-5678"
+    },
+    {
+      "id": 11,
+      "nome": "Ricardo Silva",
+      "endereco": "Rua K, 808",
+      "cep": "90123-456",
+      "data_nascimento": "1989-07-21",
+      "telefone": "(11) 91234-6789"
+    },
+    {
+      "id": 12,
+      "nome": "Patrícia Almeida",
+      "endereco": "Avenida L, 909",
+      "cep": "01234-567",
+      "data_nascimento": "1994-05-29",
+      "telefone": "(21) 91234-7890"
+    }
+  ]
+}

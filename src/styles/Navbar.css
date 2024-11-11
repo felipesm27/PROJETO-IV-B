@@ -1,0 +1,11 @@
+/* src/styles/NavBar.css */
+.nav {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+}

@@ -1,0 +1,51 @@
+/* src/styles/ItemCliente.css */
+
+.item-cliente {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* src/styles/ItemCliente.css */
+
+.item-cliente {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acoes-cliente {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.botao-editar {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botao-excluir {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botao-editar:hover {
+  background-color: #e0a800;
+}
+
+.botao-excluir:hover {
+  background-color: #c82333;
+}
