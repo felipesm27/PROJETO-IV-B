@@ -1,8 +1,8 @@
 # Gestão de Clientes
 
-Este é um projeto de exemplo desenvolvido em React com Vite para gerenciar uma lista de clientes. O sistema permite adicionar, editar, excluir e pesquisar clientes, além de contar o número total de cadastros.
+Este é um projeto de exemplo desenvolvido em **React** com **Vite** para gerenciar uma lista de clientes. O sistema permite adicionar, editar, excluir e pesquisar clientes, além de contar o número total de cadastros.
 
-Usando Vite para acelerar o processo de desenvolvimento, oferecendo uma experiência mais rápida e eficiente na construção da interface do usuário.
+Usamos **Vite** para acelerar o processo de desenvolvimento, oferecendo uma experiência mais rápida e eficiente na construção da interface do usuário.
 
 ## Funcionalidades
 
@@ -31,18 +31,21 @@ Usando Vite para acelerar o processo de desenvolvimento, oferecendo uma experiê
    ```
 3. Inicie o JSON Server para simular uma API REST com o arquivo `clientes.json`:
    ```bash
-   json-server --watch clientes.json --port 3001
+   npm run server
    ```
 4. Execute o projeto React:
    ```bash
-   npm start
+   npm run dev
    ```
 5. Acesse a aplicação no navegador em `http://localhost:3000`.
 
 ## Dependências
 
 - **React**: Biblioteca principal para a criação da interface do usuário.
+- **React DOM**: Biblioteca para manipulação do DOM com React.
+- **Vite**: Ferramenta de desenvolvimento para criação de projetos React rápida e eficientemente.
 - **JSON Server**: Utilizado para simular uma API REST com operações CRUD.
+- **ESLint e Plugins**: Ferramenta de linting para manter o código limpo e consistente.
 
 ## Estrutura do Banco de Dados
 
@@ -52,12 +55,20 @@ O arquivo `clientes.json` armazena os dados dos clientes com o seguinte formato:
 {
   "clientes": [
     {
-      "cliente_id": 1,
+      "id": 1,
       "nome": "João Silva",
       "endereco": "Rua A, 123",
       "cep": "12345-678",
       "data_nascimento": "1990-01-01",
       "telefone": "(11) 91234-5678"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Santos",
+      "endereco": "Avenida B, 456",
+      "cep": "87654-321",
+      "data_nascimento": "1985-05-15",
+      "telefone": "(21) 91234-5678"
     },
     ...
   ]
