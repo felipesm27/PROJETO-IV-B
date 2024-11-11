@@ -1,6 +1,8 @@
 # Gestão de Clientes
 
-Este é um projeto de exemplo desenvolvido em React para gerenciar uma lista de clientes. O sistema permite adicionar, editar, excluir e pesquisar clientes, além de contar o número total de cadastros.
+Este é um projeto de exemplo desenvolvido em React com Vite para gerenciar uma lista de clientes. O sistema permite adicionar, editar, excluir e pesquisar clientes, além de contar o número total de cadastros.
+
+Usando Vite para acelerar o processo de desenvolvimento, oferecendo uma experiência mais rápida e eficiente na construção da interface do usuário.
 
 ## Funcionalidades
 
