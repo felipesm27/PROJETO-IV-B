@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import "./styles/MainContent.css";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BarraDePesquisa from "./components/BarraDePesquisa";
 import ListaDeClientes from "./components/ListaDeClientes";
+import ContagemRegistros from "./components/ContagemRegistros";
 import { fetchClientes } from "./services/api";
 
 function App() {
@@ -49,12 +51,8 @@ function App() {
           onBlur={() => setPesquisaFocada(false)} // Atualiza o estado para false ao desfocar
         />
 
-        {/* Exibe a contagem de registros encontrados dinamicamente */}
-        <p>
-          {clientesFiltrados.length > 1
-            ? `${clientesFiltrados.length} registros encontrados`
-            : `${clientesFiltrados.length} registro encontrado`}
-        </p>
+        {/* Usa o novo componente para exibir a contagem de registros */}
+        <ContagemRegistros total={clientesFiltrados.length} />
 
         <div className="area-lista-clientes">
           {/* Passa a lista de clientes filtrados e usa uma key única para cada item */}

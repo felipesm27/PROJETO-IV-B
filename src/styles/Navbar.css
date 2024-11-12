@@ -1,9 +1,13 @@
 /* src/styles/NavBar.css */
+
 .nav {
   background-color: #333;
   color: #fff;
   padding: 1rem;
   text-align: center;
+  position: sticky; /* Fixa o NavBar no topo do contêiner pai */
+  top: 0; /* Mantém o NavBar no topo do main-container */
+  z-index: 10; /* Garante que o NavBar fique acima do conteúdo */
 }
 
 .title {
