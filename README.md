@@ -74,3 +74,14 @@ O arquivo `clientes.json` armazena os dados dos clientes com o seguinte formato:
   ]
 }
 ```
+
+## Checklist de Tarefas Pendentes
+
+Aqui estão algumas funcionalidades e melhorias que ainda precisam ser implementadas:
+
+- [ ] **Adicionar SweetAlert** para notificações e feedback de ações, como cadastro, edição, exclusão e erros.
+- [ ] **Finalizar a funcionalidade de cadastro** de clientes (adicionar cliente ao JSON Server).
+- [ ] **Finalizar a funcionalidade de edição** de clientes (atualizar informações do cliente no JSON Server).
+- [ ] **Finalizar a funcionalidade de exclusão** de clientes (remover cliente do JSON Server).
+- [ ] **Refatorar o código onde possível** para melhorar a organização e modularidade.
+- [ ] **Adicionar um indicador de carregamento (opcional)** para melhorar a experiência do usuário enquanto os dados são carregados.
