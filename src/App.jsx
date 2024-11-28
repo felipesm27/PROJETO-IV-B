@@ -7,11 +7,11 @@ import BarraDePesquisa from "./components/BarraDePesquisa";
 import ListaDeClientes from "./components/ListaDeClientes";
 import ContagemRegistros from "./components/ContagemRegistros";
 import useClientes from "./hooks/useClientes"; // Importa o hook personalizado
+import BotaoNovoCliente from "./components/BotaoNovoCliente"; // Importa o novo componente
 
 function App() {
   const { clientes, error } = useClientes(); // Usa o hook para obter clientes e erro
   const [pesquisa, setPesquisa] = useState("");
-  const [pesquisaFocada, setPesquisaFocada] = useState(false);
 
   const clientesFiltrados = clientes.filter((cliente) =>
     cliente.nome.toLowerCase().includes(pesquisa.toLowerCase())
@@ -25,9 +25,8 @@ function App() {
     <div>
       <NavBar />
       <main className="main-container">
-        <button onClick={abrirFormularioNovoCliente} className="botao-novo">
-          Novo
-        </button>
+        {/* Chama o botao novo cliente */}
+        <BotaoNovoCliente onAbrirFormulario={abrirFormularioNovoCliente} />
 
         <BarraDePesquisa
           valorPesquisa={pesquisa}

@@ -7,8 +7,7 @@ export async function fetchClientes() {
     const data = await response.json();
     return { status: 200, data }; // Garante que o status e os dados sejam retornados em caso de sucesso
   } catch (error) {
-    console.error("Erro ao buscar clientes:", error);
-    return { status: 400, error: error.message || "Erro ao buscar clientes" }; // Retorna um objeto com status e erro em caso de falha
+    return { status: 400, message: "Erro ao carregar cliente", error }; // Retorna uma mensagem customizada e o erro original
   }
 }
 
@@ -20,10 +19,8 @@ export async function addCliente(req, res) {
       headers,
       body: JSON.stringify(req.body),
     });
-    const data = await response.json();
     res.status(200).json(data); // Responde com status 200 e dados do cliente adicionado
   } catch (error) {
-    console.error("Erro ao adicionar cliente:", error);
     res.status(400).send(error); // Responde com status 400 em caso de erro
   }
 }
@@ -40,7 +37,6 @@ export async function updateCliente(req, res) {
     const data = await response.json();
     res.status(200).json(data); // Responde com status 200 e dados do cliente atualizado
   } catch (error) {
-    console.error("Erro ao atualizar cliente:", error);
     res.status(400).send(error); // Responde com status 400 em caso de erro
   }
 }
@@ -55,7 +51,6 @@ export async function deleteCliente(req, res) {
     });
     res.status(200).send(); // Responde com status 200 em caso de sucesso no delete
   } catch (error) {
-    console.error("Erro ao deletar cliente:", error);
     res.status(400).send(error); // Responde com status 400 em caso de erro
   }
 }

@@ -1,14 +1,17 @@
-// src/components/ItemCliente.js
 import React from "react";
+import { confirmarExclusao, confirmarEdicao } from "../utils/swalUtils"; // Importa as funções
+
 import "../styles/ItemCliente.css";
 
 function ItemCliente({ cliente }) {
   const editarCliente = () => {
-    console.log(`Editar cliente: ${cliente.id}`);
+    // Passa o ID e o Nome para a função de edição
+    confirmarEdicao(cliente.id, cliente.nome);
   };
 
   const excluirCliente = () => {
-    console.log(`Excluir cliente: ${cliente.id}`);
+    // Passa o ID e o Nome para a função de exclusão
+    confirmarExclusao(cliente.id, cliente.nome);
   };
 
   return (
