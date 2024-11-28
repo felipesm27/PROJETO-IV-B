@@ -45,6 +45,7 @@ Usamos **Vite** para acelerar o processo de desenvolvimento, oferecendo uma expe
 - **React DOM**: Biblioteca para manipulação do DOM com React.
 - **Vite**: Ferramenta de desenvolvimento para criação de projetos React rápida e eficientemente.
 - **JSON Server**: Utilizado para simular uma API REST com operações CRUD.
+- **SweetAlert2:**: Biblioteca para exibir alertas personalizados, usada para confirmação de exclusão de clientes e futuras edições.
 - **ESLint e Plugins**: Ferramenta de linting para manter o código limpo e consistente.
 
 ## Estrutura do Banco de Dados
@@ -79,7 +80,7 @@ O arquivo `clientes.json` armazena os dados dos clientes com o seguinte formato:
 
 Aqui estão algumas funcionalidades e melhorias que ainda precisam ser implementadas:
 
-- [ ] **Adicionar SweetAlert** para notificações e feedback de ações, como cadastro, edição, exclusão e erros.
+- [x] **Adicionar SweetAlert** para notificações e feedback de ações, como cadastro, edição, exclusão e erros.
 - [ ] **Finalizar a funcionalidade de cadastro** de clientes (adicionar cliente ao JSON Server).
 - [ ] **Finalizar a funcionalidade de edição** de clientes (atualizar informações do cliente no JSON Server).
 - [ ] **Finalizar a funcionalidade de exclusão** de clientes (remover cliente do JSON Server).
