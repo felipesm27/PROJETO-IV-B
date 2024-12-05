@@ -12,6 +12,7 @@ import BotaoNovoCliente from "./components/BotaoNovoCliente"; // Importa o novo 
 function App() {
   const { clientes, error } = useClientes(); // Usa o hook para obter clientes e erro
   const [pesquisa, setPesquisa] = useState("");
+  const [pesquisaFocada, setPesquisaFocada] = useState(false);
 
   const clientesFiltrados = clientes.filter((cliente) =>
     cliente.nome.toLowerCase().includes(pesquisa.toLowerCase())
