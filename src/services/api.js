@@ -12,16 +12,17 @@ export async function fetchClientes() {
 }
 
 // Função para adicionar um novo cliente
-export async function addCliente(req, res) {
+export async function addCliente(cliente) {
   try {
     const response = await fetch(API_URL, {
       method: "POST",
-      headers,
-      body: JSON.stringify(req.body),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cliente),
     });
-    res.status(200).json(data); // Responde com status 200 e dados do cliente adicionado
+    const data = await response.json();
+    return { status: 200, data };
   } catch (error) {
-    res.status(400).send(error); // Responde com status 400 em caso de erro
+    return { status: 400, message: "Erro ao cadastrar cliente", error };
   }
 }
 
