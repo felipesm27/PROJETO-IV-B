@@ -56,7 +56,7 @@ O arquivo `clientes.json` armazena os dados dos clientes com o seguinte formato:
 {
   "clientes": [
     {
-      "id": 1,
+      "cliente_id": 1,
       "nome": "João Silva",
       "endereco": "Rua A, 123",
       "cep": "12345-678",
@@ -64,7 +64,7 @@ O arquivo `clientes.json` armazena os dados dos clientes com o seguinte formato:
       "telefone": "(11) 91234-5678"
     },
     {
-      "id": 2,
+      "cliente_id": 2,
       "nome": "Maria Santos",
       "endereco": "Avenida B, 456",
       "cep": "87654-321",
