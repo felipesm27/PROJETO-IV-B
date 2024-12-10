@@ -51,3 +51,12 @@ export const confirmarEdicao = (clienteId, clienteNome) => {
     }
   });
 };
+
+export const sucessoCadastro = (clienteNome) => {
+  return Swal.fire({
+    title: "Cadastro Realizado!",
+    text: `O cliente ${clienteNome} foi cadastrado com sucesso.`,
+    icon: "success",
+    confirmButtonColor: "#3085d6",
+  });
+};

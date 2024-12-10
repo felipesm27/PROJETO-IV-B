@@ -6,7 +6,8 @@
       "endereco": "Avenida Brasil, 456, Jardim America, Rio de Janeiro - RJ",
       "cep": "22290-000",
       "data_nascimento": "1990-07-15",
-      "telefone": "(21) 99876-5432"
+      "telefone": "(21) 99876-5432",
+      "id": "f0e6"
     },
     {
       "cliente_id": 2,
@@ -14,7 +15,8 @@
       "endereco": "Rua do Comercio, 789, Centro, Belo Horizonte - MG",
       "cep": "30190-000",
       "data_nascimento": "1982-11-05",
-      "telefone": "(31) 93456-7890"
+      "telefone": "(31) 93456-7890",
+      "id": "3468"
     },
     {
       "cliente_id": 3,
@@ -22,7 +24,8 @@
       "endereco": "Praça da Liberdade, 10, Liberdade, Salvador - BA",
       "cep": "40040-000",
       "data_nascimento": "1978-05-22",
-      "telefone": "(71) 98765-4321"
+      "telefone": "(71) 98765-4321",
+      "id": "f8ca"
     },
     {
       "cliente_id": 4,
@@ -30,7 +33,8 @@
       "endereco": "Rua das Palmeiras, 321, Centro, Curitiba - PR",
       "cep": "80010-000",
       "data_nascimento": "1995-09-10",
-      "telefone": "(41) 95678-1234"
+      "telefone": "(41) 95678-1234",
+      "id": "5f32"
     }
   ]
 }
