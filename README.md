@@ -84,7 +84,7 @@ Aqui estão algumas funcionalidades e melhorias que ainda precisam ser implement
 
 - [x] **Adicionar SweetAlert** para notificações e feedback de ações, como cadastro, edição, exclusão e erros.
 - [x] **Finalizar a funcionalidade de cadastro** de clientes (adicionar cliente ao JSON Server).
-- [ ] **Finalizar a funcionalidade de edição** de clientes (atualizar informações do cliente no JSON Server).
-- [ ] **Finalizar a funcionalidade de exclusão** de clientes (remover cliente do JSON Server).
+- [x] **Finalizar a funcionalidade de edição** de clientes (atualizar informações do cliente no JSON Server).
+- [x] **Finalizar a funcionalidade de exclusão** de clientes (remover cliente do JSON Server).
 - [ ] **Refatorar o código onde possível** para melhorar a organização e modularidade.
 - [ ] **Adicionar um indicador de carregamento (opcional)** para melhorar a experiência do usuário enquanto os dados são carregados.

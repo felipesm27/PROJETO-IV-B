@@ -1,12 +1,15 @@
-// src/components/ListaDeClientes.js
-import React from "react";
 import ItemCliente from "./ItemCliente";
 
-function ListaDeClientes({ clientes }) {
+function ListaDeClientes({ clientes, onExcluir, onEditar }) {
   return (
     <div className="lista-de-clientes">
       {clientes.map((cliente) => (
-        <ItemCliente key={cliente.id} cliente={cliente} />
+        <ItemCliente
+          key={cliente.id} // Usa o id como chave
+          cliente={cliente}
+          onExcluir={onExcluir}
+          onEditar={onEditar}
+        />
       ))}
     </div>
   );

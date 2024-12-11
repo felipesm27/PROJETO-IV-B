@@ -49,3 +49,58 @@
 .botao-excluir:hover {
   background-color: #c82333;
 }
+
+/* Formulário de edição */
+.modo-edicao {
+  display: flex;
+
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid red;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.modo-edicao input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modo-edicao input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modo-edicao .botoes-edicao {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.botao-salvar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botao-salvar:hover {
+  background-color: #218838;
+}
+
+.botao-cancelar {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botao-cancelar:hover {
+  background-color: #5a6268;
+}

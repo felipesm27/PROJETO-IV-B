@@ -1,22 +1,21 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { addCliente } from "./services/api"; // Importa a função de serviço
-import { sucessoCadastro } from "./utils/swalUtils";
-import "./App.css";
-import "./styles/MainContent.css";
+import useClientes from "./hooks/useClientes"; // Hook personalizado
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BarraDePesquisa from "./components/BarraDePesquisa";
 import ListaDeClientes from "./components/ListaDeClientes";
 import ContagemRegistros from "./components/ContagemRegistros";
-import useClientes from "./hooks/useClientes"; // Importa o hook personalizado
-import BotaoNovoCliente from "./components/BotaoNovoCliente"; // Importa o novo componente
-import FormularioCadastroCliente from "./components/FormularioCadastroCliente"; // Importa o formulário
+import BotaoNovoCliente from "./components/BotaoNovoCliente";
+import FormularioCadastroCliente from "./components/FormularioCadastroCliente";
+import { sucessoEdicao, erroEdicao } from "./utils/swalUtils"; // Importa as funções de alertas
+
+import "./App.css";
+import "./styles/MainContent.css";
 
 function App() {
-  const { clientes, error, setClientes } = useClientes(); // Usa o hook para obter clientes e erro
+  const { clientes, error, cadastrarCliente, excluirCliente, editarCliente } =
+    useClientes();
   const [pesquisa, setPesquisa] = useState("");
-  const [pesquisaFocada, setPesquisaFocada] = useState(false);
   const [exibirFormulario, setExibirFormulario] = useState(false);
 
   const clientesFiltrados = clientes.filter((cliente) =>
@@ -26,20 +25,17 @@ function App() {
   const abrirFormularioNovoCliente = () => setExibirFormulario(true);
   const fecharFormulario = () => setExibirFormulario(false);
 
-  const cadastrarCliente = async (novoCliente) => {
+  const handleEditarCliente = async (clienteId, clienteAtualizado) => {
     try {
-      const clienteComId = { ...novoCliente, id: uuidv4() }; // Gera um ID único usando UUID
-
-      const response = await addCliente(clienteComId);
-      if (response.status === 200) {
-        sucessoCadastro(novoCliente.nome); // Exibe alerta de sucesso
-        setClientes((prevClientes) => [...prevClientes, response.data]); // Atualiza a lista localmente
-        fecharFormulario(); // Fecha o formulário após o cadastro
+      const resultado = await editarCliente(clienteId, clienteAtualizado);
+      if (resultado.success) {
+        sucessoEdicao(clienteAtualizado.nome); // Exibe um alerta de sucesso com o nome do cliente
       } else {
-        console.error("Erro ao cadastrar cliente:", response.message);
+        erroEdicao(); // Exibe um alerta genérico de erro
       }
     } catch (error) {
-      console.error("Erro na conexão:", error);
+      console.error("Erro ao editar cliente:", error);
+      erroEdicao(); // Exibe um alerta de erro no caso de falha na conexão
     }
   };
 
@@ -55,16 +51,12 @@ function App() {
           />
         )}
 
-        {/* Mostrar o botão "Novo" e a barra de pesquisa apenas se o formulário não estiver visível */}
         {!exibirFormulario && (
           <>
             <BotaoNovoCliente onAbrirFormulario={abrirFormularioNovoCliente} />
-
             <BarraDePesquisa
               valorPesquisa={pesquisa}
               aoAlterarPesquisa={setPesquisa}
-              onFocus={() => setPesquisaFocada(true)}
-              onBlur={() => setPesquisaFocada(false)}
             />
           </>
         )}
@@ -74,7 +66,11 @@ function App() {
         {error && <p className="error-message">{error}</p>}
 
         <div className="area-lista-clientes">
-          <ListaDeClientes clientes={clientesFiltrados} />
+          <ListaDeClientes
+            clientes={clientesFiltrados}
+            onExcluir={excluirCliente}
+            onEditar={handleEditarCliente} // Passa a função de edição
+          />
         </div>
       </main>
       <Footer />

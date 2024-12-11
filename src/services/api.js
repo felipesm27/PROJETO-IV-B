@@ -27,31 +27,43 @@ export async function addCliente(cliente) {
 }
 
 // Função para atualizar um cliente existente
-export async function updateCliente(req, res) {
-  const { id } = req.params;
+export async function updateCliente(clienteId, clienteAtualizado) {
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${API_URL}/${clienteId}`, {
       method: "PUT",
-      headers,
-      body: JSON.stringify(req.body),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(clienteAtualizado),
     });
+
+    if (!response.ok) {
+      throw new Error("Erro ao atualizar cliente");
+    }
+
     const data = await response.json();
-    res.status(200).json(data); // Responde com status 200 e dados do cliente atualizado
+    return { status: 200, data }; // Retorna o cliente atualizado
   } catch (error) {
-    res.status(400).send(error); // Responde com status 400 em caso de erro
+    return { status: 400, message: error.message };
   }
 }
 
 // Função para deletar um cliente
-export async function deleteCliente(req, res) {
-  const { id } = req.params;
+export async function deleteCliente(clienteId) {
   try {
-    await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${API_URL}/${clienteId}`, {
       method: "DELETE",
-      headers,
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
-    res.status(200).send(); // Responde com status 200 em caso de sucesso no delete
+
+    if (!response.ok) {
+      throw new Error("Erro ao excluir cliente");
+    }
+
+    return { status: 200 }; // Retorna sucesso se a exclusão for realizada
   } catch (error) {
-    res.status(400).send(error); // Responde com status 400 em caso de erro
+    return { status: 400, message: "Erro ao excluir cliente", error };
   }
 }

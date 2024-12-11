@@ -1,40 +1,20 @@
 {
   "clientes": [
     {
-      "cliente_id": 1,
-      "nome": "Joao Oliveira",
-      "endereco": "Avenida Brasil, 456, Jardim America, Rio de Janeiro - RJ",
-      "cep": "22290-000",
-      "data_nascimento": "1990-07-15",
-      "telefone": "(21) 99876-5432",
-      "id": "f0e6"
+      "id": "d453e2be-24bd-4eb5-ab81-b21052f703c4",
+      "nome": "Jose Henrique",
+      "endereco": "Rua 2, 189",
+      "cep": "65465-456",
+      "data_nascimento": "2024-12-24",
+      "telefone": "(53) 98150-5224"
     },
     {
-      "cliente_id": 2,
-      "nome": "Ana Costa",
-      "endereco": "Rua do Comercio, 789, Centro, Belo Horizonte - MG",
-      "cep": "30190-000",
-      "data_nascimento": "1982-11-05",
-      "telefone": "(31) 93456-7890",
-      "id": "3468"
-    },
-    {
-      "cliente_id": 3,
-      "nome": "Carlos Souza",
-      "endereco": "Praça da Liberdade, 10, Liberdade, Salvador - BA",
-      "cep": "40040-000",
-      "data_nascimento": "1978-05-22",
-      "telefone": "(71) 98765-4321",
-      "id": "f8ca"
-    },
-    {
-      "cliente_id": 4,
-      "nome": "Juliana Pereira",
-      "endereco": "Rua das Palmeiras, 321, Centro, Curitiba - PR",
-      "cep": "80010-000",
-      "data_nascimento": "1995-09-10",
-      "telefone": "(41) 95678-1234",
-      "id": "5f32"
+      "id": "8b8ba08a-3686-45af-b438-4826a4b12ca1",
+      "nome": "Milena Ribeiro",
+      "endereco": "Rua 3, 4524",
+      "cep": "55464-151",
+      "data_nascimento": "2024-12-26",
+      "telefone": "(53) 56545-6455"
     }
   ]
 }

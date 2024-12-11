@@ -11,44 +11,6 @@ export const confirmarExclusao = (clienteId, clienteNome) => {
     cancelButtonText: "Cancelar",
     confirmButtonColor: "#d33",
     cancelButtonColor: "#3085d6",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      // Para fins didáticos, simula a exclusão e exibe a mensagem
-      console.log(`Cliente com ID ${clienteId} foi excluído! (simulação)`);
-      Swal.fire(
-        "Excluído!",
-        `O cliente ${clienteNome} foi excluído com sucesso.`,
-        "success"
-      );
-    } else {
-      console.log("Exclusão cancelada");
-    }
-  });
-};
-
-// Função de confirmação de edição
-export const confirmarEdicao = (clienteId, clienteNome) => {
-  return Swal.fire({
-    title: "Tem certeza?",
-    text: `Você está prestes a editar os dados do cliente ${clienteNome}. Deseja continuar?`,
-    icon: "info",
-    showCancelButton: true,
-    confirmButtonText: "Sim, editar",
-    cancelButtonText: "Cancelar",
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      // Para fins didáticos, simula a edição e exibe a mensagem
-      console.log(`Cliente com ID ${clienteId} será editado! (simulação)`);
-      Swal.fire(
-        "Edição Confirmada!",
-        `Você está prestes a editar os dados do cliente ${clienteNome}.`,
-        "info"
-      );
-    } else {
-      console.log("Edição cancelada");
-    }
   });
 };
 
@@ -58,5 +20,27 @@ export const sucessoCadastro = (clienteNome) => {
     text: `O cliente ${clienteNome} foi cadastrado com sucesso.`,
     icon: "success",
     confirmButtonColor: "#3085d6",
+  });
+};
+
+// Alerta de sucesso ao editar cliente
+export const sucessoEdicao = (nomeCliente) => {
+  Swal.fire({
+    title: "Edição Concluída!",
+    text: `O cliente ${nomeCliente} foi editado com sucesso.`,
+    icon: "success",
+    confirmButtonText: "OK",
+    confirmButtonColor: "#28a745",
+  });
+};
+
+// Alerta de erro ao editar cliente
+export const erroEdicao = () => {
+  Swal.fire({
+    title: "Erro ao Editar",
+    text: "Não foi possível editar o cliente. Tente novamente.",
+    icon: "error",
+    confirmButtonText: "OK",
+    confirmButtonColor: "#dc3545",
   });
 };
